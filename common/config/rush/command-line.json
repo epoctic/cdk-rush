@@ -1,0 +1,33 @@
+/**
+ * This configuration file defines custom commands for the "rush" command-line.
+ * More documentation is available on the Rush website: https://rushjs.io
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+
+  "commands": [
+    {
+      "name": "platforminstall",
+      "commandKind": "global",
+      "summary": "installs dependencies for projects of type Platform and their dependencies",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "rush install --to-version-policy Platform"
+    },
+    {
+      "name": "platformbuild",
+      "commandKind": "global",
+      "summary": "builds all projects of type Platform and their dependencies",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "rush build --to-version-policy Platform"
+    },
+    {
+      "name": "platformrebuild",
+      "commandKind": "global",
+      "summary": "rebuilds all projects of type Platform and their dependencies",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "rush rebuild --to-version-policy Platform"
+    }
+  ],
+
+  "parameters": []
+}

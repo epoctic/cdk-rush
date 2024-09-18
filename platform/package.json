@@ -1,0 +1,23 @@
+{
+  "name": "platform",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "cdk": "cdk",
+    "clean": "rm -rf ./dist; rm ./tsconfig.tsbuildinfo 2>/dev/null || true",
+    "checkcontext": "[ -L cdk.context.json ] || ( rm cdk.context.json && ln -s ../cdk.context.json cdk.context.json )",
+    "watch": "npm run clean && tsc -b -w tsconfig.json",
+    "test": ""
+  },
+  "devDependencies": {
+    "@types/node": "18.19.50",
+    "aws-cdk": "2.157.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.2"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.157.0",
+    "constructs": "10.3.0",
+    "source-map-support": "0.5.21"
+  }
+}
