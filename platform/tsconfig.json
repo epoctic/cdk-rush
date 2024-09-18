@@ -11,6 +11,9 @@
     "skipLibCheck": true,
     "moduleResolution": "node16"
   },
+  "ts-node": {
+    "swc": true
+  },
   "include": [
     "src/**/*"
   ],
