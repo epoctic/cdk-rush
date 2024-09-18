@@ -104,4 +104,5 @@ dist-storybook/
 
 # CDK ignores
 cdk.out
-cdk.context.json # ignoring as it contains arguably sensitive information
+# ignoring as it contains arguably sensitive information
+cdk.context.json
